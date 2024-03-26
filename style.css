@@ -11,7 +11,16 @@
 
 :root {
     --bg-color: rgb(164, 159, 159);
+    --color: rgb(114, 109, 109);
+    --main-color: rgb(74, 76, 79);
 }
+
+body {
+    /* background-color: var(--main-color); */
+    /* color: var(--color); */
+    font-weight: 100;
+}
+
 img {
     width: 100%;
 }
@@ -119,7 +128,33 @@ main {
 }
 
 main .left {
-    background-color: blue;
+    overflow-y: hidden;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0.5rem;
+}
+
+.left::-webkit-scrollbar {
+    width: 7px;
+}
+
+.left::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.left::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.left::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.left:hover {
+overflow-y: scroll;
 }
 
 main .left-inner {
@@ -132,6 +167,89 @@ main .left-inner {
 .home, .shorts, .subscription, .section-you, .channel, .history, .videos,
 .watch, .show-more {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     height: 2.5rem;
 }
+
+.sub-section .section .content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 3rem;
+}
+
+.sub-section .section .content .profile-picture {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sub-section .icon-content {
+    display: flex;
+    height: 2.5rem;
+    gap: 1rem;
+}
+
+.sub-section > p {
+    font-weight: 600;
+    font-size: 1.08rem;
+    margin-bottom: 0.8rem;
+}
+
+.sub-section-footer a {
+    display: inline-block;
+    line-height: 1.3;
+}
+
+.sub-section-footer .sep {
+    margin-bottom: 1rem;
+}
+
+.sub-section-footer span {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgb(155, 154, 154);
+    font-size: 14px;
+}
+
+.youtube i {
+    color: red;
+}
+
+.subscription, .show-more, .border {
+    border-bottom: 1px solid rgb(194, 191, 191);
+    margin-bottom: 1rem;
+}
+
+.right {
+    overflow-x: hidden;
+    padding-left: 2rem;
+}
+.right .right-header {
+    display: flex;
+    white-space: nowrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.right .right-header p {
+    padding: 0.5rem;
+    background-color: rgb(140, 140, 151);
+    border-radius: 0.5rem;
+}
+
+.right .right-header .icon-right {
+    position: absolute;
+    right: 30px;
+}
+
+.right .right-header i {
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+/* AIzaSyAIC1VeNFCmKtsy2mQmLa_ipS5ik2DNQkA */
