@@ -132,7 +132,6 @@ main .left {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-right: 0.5rem;
 }
 
@@ -224,13 +223,43 @@ main .left-inner {
 }
 
 .right {
+    height: 90vh;
     overflow-x: hidden;
     padding-left: 2rem;
 }
 
-.right .right-header-container .right-header-nav{
-    display: flex;
-    align-items: flex-end;
+.icon-left {
+    font-size: 2rem;
+    position: absolute;
+    top: 18px;
+    left: -20px;
+    z-index: 10000000;
+    color: black;
+}
+
+.icon-right {
+    font-size: 2rem;
+    position: absolute;
+    top: 18px;
+    left: 65rem;
+    z-index: 100000000;
+    color: black;
+}
+
+.icon-right:hover, .icon-left:hover {
+    background-color: var(--bg-color);
+    height: 2rem;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+}
+
+.right .right-header-container {
+    position: fixed;
+    background-color: white;
+    height: 4rem;
 }
 
 .right .right-header-container .right-header-nav .middle-content {
@@ -242,7 +271,7 @@ main .left-inner {
     position: relative;
 }
 
-.right .right-header p {
+.right .right-header-container p {
     padding: 0.5rem;
     background-color: rgb(140, 140, 151);
     border-radius: 0.5rem;
@@ -262,7 +291,7 @@ main .left-inner {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .right .right-bottom div {
