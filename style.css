@@ -154,7 +154,7 @@ main .left {
 }
 
 .left:hover {
-overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 main .left-inner {
@@ -227,7 +227,13 @@ main .left-inner {
     overflow-x: hidden;
     padding-left: 2rem;
 }
-.right .right-header {
+
+.right .right-header-container .right-header-nav{
+    display: flex;
+    align-items: flex-end;
+}
+
+.right .right-header-container .right-header-nav .middle-content {
     display: flex;
     white-space: nowrap;
     gap: 1rem;
@@ -252,4 +258,49 @@ main .left-inner {
     overflow: hidden;
 }
 
-/* AIzaSyAIC1VeNFCmKtsy2mQmLa_ipS5ik2DNQkA */
+.right .right-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.right .right-bottom div {
+    display: block;
+    max-width: 320px;
+}
+
+.right-bottom a {
+    display: block;
+    margin-bottom: 2rem;
+}
+.right .right-bottom .video-thumbnail img {
+    border-radius: 1rem;
+}
+
+.right .right-bottom .video-description {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+
+.right .right-bottom .video-description .profile-picture img {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.right .right-bottom .space-top {
+    margin-top: 2rem;
+}
+
+.right .right-bottom .video-text h3 {
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.right .right-bottom .video-text p {
+    color: var(--color)
+}
