@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive YouTube Navigation Bar</title>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-NP8G/h3DwAW9T5V0rsgz90pYMpmT7BqVNOd9f0wYHRtbUiZflD1ilGvjWBE1lNN3" crossorigin="anonymous">
+<style>
+    /* Reset some default styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #ff0000; /* YouTube red color */
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        color: #fff; /* White color for text */
+        text-decoration: none;
+    }
+
+    .navbar-brand h1 {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        color: #fff; /* White color for text */
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .navbar-links a:last-child {
+        margin-right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navbar-links {
+            display: none;
+        }
+
+        .navbar-toggle {
+            display: block;
+            color: #fff; /* White color for icon */
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .navbar-toggle.active .fa-bars {
+            display: none;
+        }
+
+        .navbar-toggle.active .fa-times {
+            display: inline;
+        }
+
+        .navbar-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #ff0000; /* YouTube red color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar-links.active a {
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">
+            <i class="fab fa-youtube"></i>
+            <h1>YouTube</h1>
+        </a>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">Trending</a>
+            <a href="#">Subscriptions</a>
+            <a href="#">Library</a>
+        </div>
+        <div class="navbar-toggle" onclick="toggleNavbar()">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </div>
+    </nav>
+
+    <script>
+        function toggleNavbar() {
+            var navbarLinks = document.querySelector('.navbar-links');
+            var navbarToggle = document.querySelector('.navbar-toggle');
+            navbarLinks.classList.toggle('active');
+            navbarToggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
