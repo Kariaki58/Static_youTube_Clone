@@ -13,9 +13,6 @@ const subscription = document.querySelector('.subscription')
 let isHidden = false;
 let color = true;
 
-left.addEventListener('mouseover', () => {
-    left.style.overflowY = 'hidden'
-})
 menu.addEventListener('click', () => {
     if (!isHidden) {
         hide_elements.forEach(element => {
@@ -36,6 +33,9 @@ menu.addEventListener('click', () => {
             data.style.fontSize = '13px'
         })
         subscription.style.borderBottom = 'none'
+        left.addEventListener('mouseover', () => {
+            left.style.overflowY = 'hidden'
+        })
     } else {
         hide_elements.forEach(element => {
             element.style.display = '';
@@ -54,6 +54,9 @@ menu.addEventListener('click', () => {
             data.style.fontSize = ''
         })
         subscription.style.borderBottom = ''
+        left.addEventListener('mouseover', () => {
+            left.style.overflowY = ''
+        })
     }
     isHidden = !isHidden;
 });
